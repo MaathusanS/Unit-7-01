@@ -12,11 +12,11 @@ function random () {
   randomNumber = (Math.random() * 6) + 1 // Generates number between 1 and 6.
   randomNumber = parseInt(randomNumber) // Converts random number to integer.
 
-  if (userGuess == randomNumber) { // Makes if statement that if the user's guess is equal to the random number, text saying they won appears.
+  if (userGuess === randomNumber) { // Makes if statement that if the user's guess is equal to the random number, text saying they won appears.
     document.getElementById('result').innerHTML = 'Congrats! You win!' // Displays text.
     document.getElementById('repeat').hidden = false // Reveals play again button.
   }
-  if (userGuess != randomNumber) { // Makes if statement that if the user's guess is not equal to the random, text saying they lost appears.
+  if (userGuess !== randomNumber) { // Makes if statement that if the user's guess is not equal to the random, text saying they lost appears.
     document.getElementById('result').innerHTML = 'You lose.' // Displays text.
     document.getElementById('repeat').hidden = false // Reveals play again button.
   }
